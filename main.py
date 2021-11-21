@@ -1,18 +1,22 @@
 # Импортируем библиотеку vk_api
 import vk_api , os, json
 from vk_api.longpoll import VkLongPoll, VkEventType
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup,element
 import requests
 import lxml
 url1='https://stopgame.ru/news'
-url2='https://yandex.ru/pogoda/stavropol'
+url2='https://pogoda.mail.ru/prognoz/moskva/'
 sg = requests.get(url1)
 pog=requests.get(url2)
 soup1 = BeautifulSoup(sg.text , 'lxml')
 soup2= BeautifulSoup(pog.text ,'lxml')
-quo = soup2.find('span',class_="temp__value temp__value_with-unit").text.strip()
+gg = soup2.find( 'div',{'class':'information__content__temperature'})
+for e in gg:
+    if type(e) == element.NavigableString and e.strip():
+        quo=e
 quotes = soup1.find_all('div',class_="caption caption-bold")
-ssl=soup1.find('a',class_='article-image image').get('href')
+ssl=soup1.a.get('href')
+
 # Создаём переменную для удобства в которой хранится наш токен от группы
 
 token = "865ce5fbfa70714548a42e42291327ed1f8787152364ab9a523c48c883068f95349ab2d355d3b56f7f542"  # В ковычки вставляем аккуратно наш ранее взятый из группы токен.
