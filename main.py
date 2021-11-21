@@ -45,19 +45,7 @@ for event in longpoll.listen():
 
             if message == 'начать':
                 ms(id, 'Привет, я бот!')
-
-            elif message == 'Бомба':
-                ms(id, 'Номер жертвы с +7:')
-                numb=message
-                ms(id, 'Время в секундах:')
-                tm=message
-                os.system(f'python c:\IB\impulse.py --method sms --time {tm} --threads 40  --target {numb}')
-
-            elif message == 'соси':
-                ms(id, 'вова чмо чехол для хуя жалкое породие на человека ')
-
-            elif message == 'бомба':
-                os.startfile('C:/Users/ADMIN/Desktop/Boomber/none.bat')
+            
 
             elif message == 'погода' or message=='температура':
 
