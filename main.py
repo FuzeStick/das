@@ -31,7 +31,6 @@ longpoll = VkLongPoll(bh)
 def ms(id, text):
     bh.method('messages.send', {'user_id': id, 'message': text, 'random_id': 0})
 
-
 # Слушаем longpoll(Сообщения)
 for event in longpoll.listen():
     if event.type == VkEventType.MESSAGE_NEW:
@@ -55,6 +54,11 @@ for event in longpoll.listen():
 
                 pogoda=(f'Температура: {quo} ')
                 ms(id,pogoda)
+                if quo>'15':
+                    ms(id,'Нормас')
+
+                else:
+                    ms(id,'Холодно')
 
             elif message == 'новости':
                 # Отправляем картинку и текст
