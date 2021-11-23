@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+
+}
+body{
+	background-image: url("zxcursed.gif");
+	background-repeat: repeat;
+	
+ 	
+	
+}
+.box{
+	
+	margin: 100px auto;
+	text-align: center;
+	background:linear-gradient( 220deg,#a520f7, #f2bf07) ;
+	width: 400px;
+	border-radius: 17px;
+	padding: 30px;
+	background-image: url(fonk.jpg);
+	background-size: contain;
+}
+#login,#ip,#btn{
+
+	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 10px;
+	outline: 0;
+	border: 0;
+	border-bottom: 2px solid;
+	font-size: 1.3em;
+
+}
+btn:{
+	background-color: #07e0e0;
+	text-transform: uppercase;
+}
+#btn:hover{
+	background-color: #08ffff;
+}

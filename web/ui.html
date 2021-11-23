@@ -1,0 +1,33 @@
+<!DOCKTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <title>Залогинься как человек</title>
+    <script src="eel.js"></script>
+    <link rel="stylesheet" type="text/css" href="styl.css">
+
+
+</head>
+<body>
+<div class="box">
+    <from action="#">
+        <input type="text" id="login" placeholder="ТЫ">
+        <input type="text" id="ip" placeholder="ПИДОР">
+        <input type="submit" id="btn" value="Офай с позором">
+
+    </from>
+
+</div>
+<script>
+    let btn=document.querySelector(#btn);
+    btn.addEventListener('click', sendData)
+    function sendData() {
+        let login=document.querySelector(#login).value;
+        let ip=document.querySelector(#ip).value;
+        eel.recv(login,ip)
+    }
+</script>
+
+</body>
+</html>>
